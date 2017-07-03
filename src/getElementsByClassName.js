@@ -16,11 +16,11 @@ var getElementsByClassName = function(className, position) {
 
   var children = elem.children;
 
- for (var i = 0; i < children.length; i++) {
-  result = result.concat(getElementsByClassName(className, children[i]));
- }
+  for (var i = 0; i < children.length; i++) {
+    result = result.concat(getElementsByClassName(className, children[i]));
+  }
 
 
- return result;
+  return result;
 
-}
+};

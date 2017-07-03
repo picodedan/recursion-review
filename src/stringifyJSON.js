@@ -6,25 +6,25 @@
 var stringifyJSON = function(obj) {
   //inpuut some object or item
   //output that object 'stringifyed' if possible
-  if (typeof obj === 'number' || typeof obj === 'boolean'){
+  if (typeof obj === 'number' || typeof obj === 'boolean') {
     return obj.toString();
   }
   if (typeof obj === 'string') {
     return '"' + obj + '"';
   }
 
-  if (Array.isArray(obj)){
+  if (Array.isArray(obj)) {
     var result = '[';
 
-    for (var i = 0; i < obj.length; i++){
-      result += stringifyJSON(obj[i]) + ",";
+    for (var i = 0; i < obj.length; i++) {
+      result += stringifyJSON(obj[i]) + ',';
     }
 
-    if (obj.length > 0){
-      result  = result.slice(0,-1);
+    if (obj.length > 0) {
+      result = result.slice(0, -1);
     }
 
-    result += "]";
+    result += ']';
 
     return result;
   }
@@ -38,6 +38,6 @@ var stringifyJSON = function(obj) {
         result.push(stringifyJSON(keys) + ':' + stringifyJSON(obj[keys]));
       }
     }
-    return  '{' + result.join(',') + '}'
+    return '{' + result.join(',') + '}';
   }
 };
