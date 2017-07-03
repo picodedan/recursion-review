@@ -31,7 +31,7 @@ var stringifyJSON = function(obj) {
   if (obj === null) {
     return 'null';
   }
-  if(typeof obj === 'object') {
+  if (typeof obj === 'object') {
     var result = [];
     for (var keys in obj) {
       if (obj.hasOwnProperty(keys) && obj[keys] !== undefined && typeof(obj[keys]) !== 'function' ) {
