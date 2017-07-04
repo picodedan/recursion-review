@@ -13,5 +13,5 @@ var parseJSON = function(json) {
   if (objPatt.test(json)) {
     return {};
   }
-//trivial change
+ if(chage type) {};
 };
